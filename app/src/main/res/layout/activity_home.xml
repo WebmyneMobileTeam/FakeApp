@@ -1,11 +1,90 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".HomeActivity">
+    android:background="@drawable/android_bg"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".HomeActivity">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <!--    <ImageView
+            android:src="@drawable/ok"
+            android:scaleType="fitEnd"
+            style="@style/both_match_parent" />-->
+
+    <LinearLayout
+        android:id="@+id/topLinear"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        style="@style/match_wrap_content">
+
+        <Button
+            android:id="@+id/btnDetectGame"
+            android:textStyle="bold"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:text="Detect Game"
+            android:background="@drawable/green_bar_s"
+            android:padding="@dimen/activity_horizontal_margin"
+            style="@style/match_wrap_content" />
+
+        <Button
+            android:id="@+id/btnPatchGame"
+            android:textStyle="bold"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:text="Apply Patch"
+            android:background="@drawable/green_bar_s"
+            android:padding="@dimen/activity_horizontal_margin"
+            style="@style/match_wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_above="@id/topLinear"
+        android:orientation="vertical"
+        style="@style/match_wrap_content">
+
+        <EditText
+            android:id="@+id/ed_diamond"
+            android:textStyle="bold"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/diamants_bar"
+            style="@style/match_wrap_content"
+            android:layout_height="48dp" />
+
+        <EditText
+            android:id="@+id/ed_coin"
+            android:textStyle="bold"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/coin_bar"
+            style="@style/match_wrap_content"
+            android:layout_height="48dp" />
+
+        <EditText
+            android:id="@+id/ed_wood"
+            android:textStyle="bold"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/wood_bar"
+            style="@style/match_wrap_content"
+            android:layout_height="48dp" />
+
+    </LinearLayout>
+
 
 </RelativeLayout>
