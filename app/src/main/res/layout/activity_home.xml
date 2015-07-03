@@ -51,18 +51,67 @@
         android:orientation="vertical"
         style="@style/match_wrap_content">
 
+        <TextView
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:gravity="center"
+            android:text="Version 1.0 Detect game before patch"
+            android:textSize="14sp"
+            android:textColor="#fff"
+            android:padding="8dp"
+            android:background="#0a0"
+            style="@style/match_wrap_content" />
+
+        <FrameLayout
+            android:layout_marginBottom="8dp"
+            android:background="#0a0"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            style="@style/match_wrap_content">
+
+            <TextView
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Game Not detected"
+                android:textSize="14sp"
+                android:textColor="#fff"
+
+                android:background="#0a0"
+                style="@style/match_wrap_content" />
+
+            <ImageView
+                android:layout_margin="4dp"
+                android:layout_gravity="center|right"
+                android:src="@drawable/wrong"
+                android:layout_width="48dp"
+                android:layout_height="48dp" />
+
+
+        </FrameLayout>
+
+
         <EditText
+
             android:id="@+id/ed_diamond"
             android:textStyle="bold"
             android:layout_margin="1dp"
             android:layout_weight="1"
             android:textSize="18sp"
+            android:paddingLeft="56dp"
+            android:textColorHint="#d1d1d1"
+            android:hint="[1-999999]"
+            android:inputType="number"
             android:textColor="@android:color/white"
             android:background="@drawable/diamants_bar"
             style="@style/match_wrap_content"
             android:layout_height="48dp" />
 
         <EditText
+            android:paddingLeft="56dp"
+            android:textColorHint="#d1d1d1"
+            android:hint="[1-999999]"
+            android:inputType="number"
             android:id="@+id/ed_coin"
             android:textStyle="bold"
             android:layout_margin="1dp"
@@ -74,6 +123,10 @@
             android:layout_height="48dp" />
 
         <EditText
+            android:paddingLeft="56dp"
+            android:textColorHint="#d1d1d1"
+            android:hint="[1-999999]"
+            android:inputType="number"
             android:id="@+id/ed_wood"
             android:textStyle="bold"
             android:layout_margin="1dp"
