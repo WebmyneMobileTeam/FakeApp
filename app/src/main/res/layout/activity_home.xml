@@ -1,5 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:slideswitch="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -59,28 +60,30 @@
             android:textSize="14sp"
             android:textColor="#fff"
             android:padding="8dp"
-            android:background="#0a0"
+            android:background="#299660"
             style="@style/match_wrap_content" />
 
         <FrameLayout
+            android:id="@+id/frame"
             android:layout_marginBottom="8dp"
-            android:background="#0a0"
+            android:background="#299660"
             android:layout_marginTop="8dp"
             android:layout_marginLeft="4dp"
             android:layout_marginRight="4dp"
             style="@style/match_wrap_content">
 
             <TextView
+                android:id="@+id/txt"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="Game Not detected"
                 android:textSize="14sp"
                 android:textColor="#fff"
 
-                android:background="#0a0"
                 style="@style/match_wrap_content" />
 
             <ImageView
+                android:id="@+id/img"
                 android:layout_margin="4dp"
                 android:layout_gravity="center|right"
                 android:src="@drawable/wrong"
@@ -144,15 +147,56 @@
 
             <TableRow style="@style/match_wrap_content">
 
-                <Switch
-                    android:layout_weight="1"
-                    style="@style/both_wrap_content"
-                    android:text="Anti BAN" />
 
-                <Switch
+                <LinearLayout
+                    android:gravity="center_vertical|left"
                     android:layout_weight="1"
-                    style="@style/both_wrap_content"
-                    android:text="Proxy" />
+                    android:orientation="horizontal"
+                    style="@style/match_wrap_content">
+
+
+                    <com.xitij.android.fakeapp.SlideSwitch
+                        android:layout_marginLeft="8dp"
+                        android:singleLine="true"
+                        slideswitch:isOpen="false"
+                        slideswitch:shape="circle"
+                        slideswitch:themeColor="#f200aa96"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:text="Anti BAN" />
+
+                    <TextView
+                        android:textSize="14sp"
+                        android:textColor="#fff"
+                        android:text="Anti BAN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center_vertical|left"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    style="@style/match_wrap_content">
+
+
+                    <com.xitij.android.fakeapp.SlideSwitch
+                        android:layout_marginLeft="8dp"
+                        android:singleLine="true"
+                        slideswitch:isOpen="false"
+                        slideswitch:shape="circle"
+                        slideswitch:themeColor="#f200aa96"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:text="Anti BAN" />
+
+                    <TextView
+                        android:textSize="14sp"
+                        android:textColor="#fff"
+                        android:text="Proxy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
 
 
             </TableRow>
@@ -161,15 +205,55 @@
                 android:layout_marginTop="8dp"
                 style="@style/match_wrap_content">
 
-                <Switch
+                <LinearLayout
+                    android:gravity="center_vertical|left"
                     android:layout_weight="1"
-                    style="@style/both_wrap_content"
-                    android:text="256 Bit SSL Encryption" />
+                    android:orientation="horizontal"
+                    style="@style/match_wrap_content">
 
-                <Switch
+
+                    <com.xitij.android.fakeapp.SlideSwitch
+                        android:layout_marginLeft="8dp"
+                        android:singleLine="true"
+                        slideswitch:isOpen="false"
+                        slideswitch:shape="circle"
+                        slideswitch:themeColor="#f200aa96"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:text="Anti BAN" />
+
+                    <TextView
+                        android:textSize="14sp"
+                        android:textColor="#fff"
+                        android:text="256 Bit SSL Encryption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center_vertical|left"
                     android:layout_weight="1"
-                    style="@style/both_wrap_content"
-                    android:text="Detect Game" />
+                    android:orientation="horizontal"
+                    style="@style/match_wrap_content">
+
+
+                    <com.xitij.android.fakeapp.SlideSwitch
+                        android:layout_marginLeft="8dp"
+                        android:singleLine="true"
+                        slideswitch:isOpen="false"
+                        slideswitch:shape="circle"
+                        slideswitch:themeColor="#f200aa96"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:text="Anti BAN" />
+
+                    <TextView
+                        android:textSize="14sp"
+                        android:textColor="#fff"
+                        android:text="Detect Game"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
 
 
             </TableRow>

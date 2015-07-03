@@ -3,6 +3,7 @@ package com.xitij.android.fakeapp;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
@@ -11,12 +12,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 
 public class HomeActivity extends ActionBarActivity {
 
     private Button btnDetectGame;
     private Button btnPatchGame;
+    private FrameLayout frameLayout;
+    private ImageView img;
+    private TextView txt;
+
 
 
     @Override
@@ -29,7 +37,16 @@ public class HomeActivity extends ActionBarActivity {
         btnPatchGame.setOnClickListener(patchListner);
         btnDetectGame.setOnClickListener(detectListner);
 
+        frameLayout = (FrameLayout)findViewById(R.id.frame);
+        img = (ImageView)findViewById(R.id.img);
+
+        frameLayout.setBackgroundColor(Color.RED);
+        img.setImageResource(R.drawable.wrong);
+        txt = (TextView)findViewById(R.id.txt);
+        txt.setText("Game Not Detected");
+
     }
+
 
     private View.OnClickListener detectListner = new View.OnClickListener() {
         @Override
@@ -51,10 +68,8 @@ public class HomeActivity extends ActionBarActivity {
     private void processPatch() {
         final Handler updateBarHandler;
         updateBarHandler = new Handler();
-
         final Handler updateBarHandlerAnother;
         updateBarHandlerAnother = new Handler();
-
 
         final ProgressDialog progressPatch;
         progressPatch = new ProgressDialog(this);
@@ -131,12 +146,15 @@ public class HomeActivity extends ActionBarActivity {
 
     private void showDetectSuccessDialog() {
 
+        frameLayout.setBackgroundColor(Color.parseColor("#299660"));
+        img.setImageResource(R.drawable.right);
+        txt.setText("Game Detected");
+
         new AlertDialog.Builder(this)
                 .setTitle("Congrates")
                 .setMessage("Game detected")
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-
                         dialog.dismiss();
                     }
                 }).setIcon(android.R.drawable.ic_dialog_alert)
