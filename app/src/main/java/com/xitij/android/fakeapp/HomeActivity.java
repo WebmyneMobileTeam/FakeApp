@@ -34,9 +34,7 @@ public class HomeActivity extends ActionBarActivity {
     private View.OnClickListener detectListner = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-
             processDetect();
-
         }
     };
 
@@ -62,7 +60,7 @@ public class HomeActivity extends ActionBarActivity {
         progressPatch = new ProgressDialog(this);
         progressPatch.setMessage("Connecting Server");
         progressPatch.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-     //   progressPatch.setIndeterminate(true);
+        //   progressPatch.setIndeterminate(true);
         progressPatch.setProgress(0);
         progressPatch.setMax(100);
         progressPatch.show();
@@ -102,12 +100,22 @@ public class HomeActivity extends ActionBarActivity {
                             @Override
                             public void run() {
 
-                                if(progressPatch.getProgress() >0 && progressPatch.getProgress()<=12){
-                                    progressPatch.setMessage("Connecting Server");
-                                }
-
-                                if(progressPatch.getProgress() >13 && progressPatch.getProgress()<=25){
-                                    progressPatch.setMessage("Patching...");
+                                if (progressPatch.getProgress() > 0 && progressPatch.getProgress() <= 12) {
+                                    progressPatch.setMessage("Validating blocks");
+                                } else if (progressPatch.getProgress() > 13 && progressPatch.getProgress() <= 20) {
+                                    progressPatch.setMessage("Connecting to server");
+                                } else if (progressPatch.getProgress() > 20 && progressPatch.getProgress() <= 35) {
+                                    progressPatch.setMessage("Downloding data");
+                                } else if (progressPatch.getProgress() > 35 && progressPatch.getProgress() <= 45) {
+                                    progressPatch.setMessage("Extracting data");
+                                } else if (progressPatch.getProgress() > 45 && progressPatch.getProgress() <= 65) {
+                                    progressPatch.setMessage("Calculating CRC values");
+                                } else if (progressPatch.getProgress() > 65 && progressPatch.getProgress() <= 75) {
+                                    progressPatch.setMessage("Packaging data");
+                                } else if (progressPatch.getProgress() > 75 && progressPatch.getProgress() <= 85) {
+                                    progressPatch.setMessage("Creating files");
+                                } else if (progressPatch.getProgress() > 85 && progressPatch.getProgress() <= 100) {
+                                    progressPatch.setMessage("Patching..");
                                 }
 
                             }

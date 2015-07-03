@@ -84,6 +84,47 @@
             style="@style/match_wrap_content"
             android:layout_height="48dp" />
 
+
+        <TableLayout
+            android:layout_margin="8dp"
+            style="@style/match_wrap_content">
+
+            <TableRow style="@style/match_wrap_content">
+
+                <Switch
+                    android:layout_weight="1"
+                    style="@style/both_wrap_content"
+                    android:text="Anti BAN" />
+
+                <Switch
+                    android:layout_weight="1"
+                    style="@style/both_wrap_content"
+                    android:text="Proxy" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="8dp"
+                style="@style/match_wrap_content">
+
+                <Switch
+                    android:layout_weight="1"
+                    style="@style/both_wrap_content"
+                    android:text="256 Bit SSL Encryption" />
+
+                <Switch
+                    android:layout_weight="1"
+                    style="@style/both_wrap_content"
+                    android:text="Detect Game" />
+
+
+            </TableRow>
+
+
+        </TableLayout>
+
+
     </LinearLayout>
 
 
